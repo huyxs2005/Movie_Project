@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đặt Vé Xem Phim - Tri7 Cinematics</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Same CSS file reference (style.css) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts & Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  >
+</head>
+<body class="booking-page">
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="navbar-container">
+      <div class="logo-container">
+        <h1 class="logo">Tri7 Cinematics</h1>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-list">
+          <li class="menu-list-item">
+            <a href="index.html">Trang chủ</a>
+          </li>
+          <li class="menu-list-item active">
+            <a href="book.html">Đặt vé</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="profile-container">
+        <!-- "Đặt vé" button is optional here since we are on the booking page -->
+        <!-- 
+        <button class="book-button" onclick="window.open('book.html','_blank')">
+          Đặt vé
+        </button>
+        -->
+
+        <!-- Login button -->
+        <button class="login-button" onclick="window.open('login.html','_blank')">
+          Login
+        </button>
+
+        <!-- Light/Dark toggle -->
+        <div class="toggle">
+          <i class="fas fa-moon toggle-icon"></i>
+          <i class="fas fa-sun toggle-icon"></i>
+          <div class="toggle-ball"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+    <div class="content-container">
+
+      <!-- Centered title -->
+      <h1 style="text-align: center; margin: 20px 0;">
+        Đặt Vé Xem Phim
+      </h1>
+
+      <!-- BOOKING FORM WRAPPER -->
+      <div class="booking-form-container" style="max-width: 500px; margin: 0 auto;">
+        <form id="bookingForm" class="booking-form">
+          
+          <!-- Chọn phim -->
+          <label for="movieSelect">Chọn phim:</label>
+          <select id="movieSelect" name="movieSelect" required>
+            <option value="">--Chọn phim--</option>
+            <option value="Captain America: Brave New World">Captain America: Brave New World</option>
+            <option value="Flow (Lạc Trôi)">Flow (Lạc Trôi)</option>
+            <option value="Flight Risk (Cuộc Đào Tẩu Trên Không)">Flight Risk (Cuộc Đào Tẩu Trên Không)</option>
+            <option value="Interstellar (CHIẾU LẠI)">Interstellar (CHIẾU LẠI)</option>
+          </select>
+
+          <!-- Ngày & Giờ -->
+          <label for="dateTimeSelect">Ngày & Giờ:</label>
+          <select id="dateTimeSelect" name="dateTimeSelect" required>
+            <option value="">dd/mm hh:mm</option>
+          </select>
+
+          <!-- Số lượng vé -->
+          <label for="ticketAmount">Số lượng vé:</label>
+          <input
+            type="number"
+            id="ticketAmount"
+            name="ticketAmount"
+            min="1"
+            max="20"
+            value="1"
+            required
+          >
+
+          <!-- Credit Card Number -->
+          <label for="cardNumber">Số thẻ tín dụng:</label>
+          <input
+            type="text"
+            id="cardNumber"
+            name="cardNumber"
+            placeholder="XXXX-XXXX-XXXX-XXXX"
+            required
+          >
+
+          <!-- Name on the card -->
+          <label for="cardName">Tên trên thẻ:</label>
+          <input
+            type="text"
+            id="cardName"
+            name="cardName"
+            placeholder="VD: NGUYEN VAN A"
+            required
+          >
+
+          <!-- Expiry date -->
+          <label for="expiryDate">Ngày hết hạn (MM/YY):</label>
+          <input
+            type="text"
+            id="expiryDate"
+            name="expiryDate"
+            placeholder="MM/YY"
+            required
+          >
+
+          <!-- CVV -->
+          <label for="cvv">CVV:</label>
+          <input
+            type="text"
+            id="cvv"
+            name="cvv"
+            placeholder="3 hoặc 4 số"
+            required
+          >
+
+          <!-- Display total price -->
+          <p style="font-weight: bold; margin-top: 10px;">
+            Tổng tiền: <span id="priceDisplay">0</span> đ
+          </p>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="detail-book-button"
+          >
+            Hoàn tất đặt vé
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to your external JS file (merged logic) -->
+  <script src="app.js"></script>
+</body>
+</html>

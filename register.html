@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Tri7 Cinematics</title>
+  <!-- Link to your merged or separate CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="register-page">
+  <!-- Background shapes (renamed so they won't conflict with .login-page) -->
+  <div class="register-background">
+    <div class="register-shape"></div>
+    <div class="register-shape"></div>
+  </div>
+
+  <!-- Glass container (renamed .register-glass-container) -->
+  <div class="register-glass-container">
+    <h3>Register Here</h3>
+    <form>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        placeholder="Enter your username"
+        id="username"
+        required
+      />
+
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        placeholder="Enter your phone number"
+        id="phone"
+        required
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        id="email"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Enter your password"
+        id="password"
+        required
+      />
+
+      <label for="confirm-password">Re-enter Password</label>
+      <input
+        type="password"
+        placeholder="Confirm your password"
+        id="confirm-password"
+        required
+      />
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
